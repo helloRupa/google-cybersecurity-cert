@@ -1,0 +1,30 @@
+# Use the NIST cybersecurity framework to respond to a security incident
+
+You are a cybersecurity analyst working for a multimedia company that offers web design services, graphic design, and social media marketing solutions to small businesses. Your organization recently experienced a DoS attack, which compromised the internal network for two hours until it was resolved.
+
+During the attack, your organization’s network services suddenly stopped responding due to an incoming flood of ICMP packets. Normal internal network traffic could not access any network resources. The incident management team responded by blocking incoming ICMP packets, stopping all non-critical network services offline, and restoring critical network services.
+
+The company’s cybersecurity team then investigated the security event. They found that a malicious actor had sent a flood of ICMP pings into the company’s network through an unconfigured firewall. This vulnerability allowed the malicious attacker to overwhelm the company’s network through a denial of service (DoS) attack.
+
+To address this security event, the network security team implemented:
+
+    A new firewall rule to limit the rate of incoming ICMP packets
+
+    Source IP address verification on the firewall to check for spoofed IP addresses on incoming ICMP packets
+
+    Network monitoring software to detect abnormal traffic patterns
+
+    An IDS/IPS system to filter out some ICMP traffic based on suspicious characteristics
+
+As a cybersecurity analyst, you are tasked with using this security event to create a plan to improve your company’s network security, following the National Institute of Standards and Technology (NIST) Cybersecurity Framework (CSF). You will use the CSF to help you navigate through the different steps of analyzing this cybersecurity event and integrate your analysis into a general security strategy. We have broken the analysis into different parts in the template below.
+
+## Activity
+
+|          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| :------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Summary  | The organization experienced a DoS attack, specifically an ICMP flood attack, which compromised the internal network for 2 hours. Internal network services stopped responding due to the flood of ICMP packets, bringing business operations to a halt. The incident management team responded by blocking incoming ICMP packets, taking non-critical services offline, and prioritizing restoring critical network services. Non-critical services were brought online after critical services were restored. |
+| Identify | A malicious actor flooded the servers with ICMP packets, affecting the entire internal network. All critical services needed to be restored to a functional state.                                                                                                                                                                                                                                                                                                                                              |
+| Protect  | The security team has implemented a new firewall rule to limit incoming ICMP packets, including checking for source IP address verification to prevent IP address spoofing. Additionally, network monitoring software has been installed to detect abnormal traffic patterns as well as an IDS/IPS system to alert and filter out ICMP traffic that is deemed suspicious.                                                                                                                                       |
+| Detect   | The team has installed an IDS/IPS system to detect suspicious traffic. They will now be alerted to abnomalies and some traffic will automatically be filtered out. Source IP address verification has also been implemented on the firewall to check for spoofed IP addresses on incoming ICMP packets.                                                                                                                                                                                                         |
+| Respond  | The team will isolate affected systems in the event of a future incident to protect other parts of the network. Critical systems will be restored first, followed by non-critical systems. Network logs will be analyzed to check for suspicious traffic. The appropriate authorities, such as management or law enforcement, will be alerted.                                                                                                                                                                  |
+| Recover  | In the future, the team will bring critical services online first, and then restore non-critical services. Non-critical services will be restored once the incident has ended, e.g. ICMP packets have stopped flooding servers. The firewall configuration and new monitoring software will prevent future incidents. The team will monitor for suspicious traffic and regularly update the firewall configuration.                                                                                             |
